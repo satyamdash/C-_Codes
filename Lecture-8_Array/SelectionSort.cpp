@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+// int swap(int c,int d){
+//     int temp;
+//     temp=c;
+//     c=d;
+//     d=temp;
+//     return c,d;
+// }
+void SelectionSort(int a[],int n){
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[j]<a[i]){
+                int temp;
+                temp=a[j];
+                a[j]=a[i];
+                a[i]=temp;
+            }
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+    
+    
+}
+
+int main(){
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    SelectionSort(a,n);
+}
